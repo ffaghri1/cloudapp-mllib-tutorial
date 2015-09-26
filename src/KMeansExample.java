@@ -72,7 +72,7 @@ public final class KMeansExample {
     public static void main(String[] args) {
         if (args.length < 2) {
             System.err.println(
-                    "Usage: GaussianMixtureMP <number_of_clusters> <input_file>");
+                    "Usage: KMeansExample <number_of_clusters> <input_file>");
             System.exit(1);
         }
         String inputFile = args[1];
