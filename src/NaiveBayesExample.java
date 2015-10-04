@@ -46,7 +46,7 @@ public final class NaiveBayesExample {
         JavaRDD<LabeledPoint> train = sc.textFile(training_data_path).map(new DataToPoint());
         JavaRDD<LabeledPoint> test = sc.textFile(training_data_path).map(new DataToPoint());
 
-        final NaiveBayesModel model = NaiveBayes.train(train.rdd(), 1.0);
+        final NaiveBayesModel model = NaiveBayes.train(train.rdd(), 90000.0D);
 
         JavaPairRDD<Double, Double> predictionAndLabel =
                 test.mapToPair(new PairFunction<LabeledPoint, Double, Double>() {
